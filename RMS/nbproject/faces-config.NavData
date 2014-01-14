@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="DashBord.xhtml" x="536" y="132" zoom="true"/>
+        <Node id="index.xhtml" x="102" y="113" zoom="false"/>
+        <Node id="Fail.xhtml" x="557" y="238" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>

@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:p="http://primefaces.org/ui"  
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+      <h:head>
+            <title>Home | Triya SoluHtion</title>
+             <f:facet name="first">
+            <meta http-equiv="X-UA-Compatible" content="EmulateIE8" />
+            <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+            <title>Home | Triya SoluHtion</title>
+        </f:facet>
+             <f:facet name="last">
+                <link type="text/css" rel="stylesheet" href="#{request.contextPath}/css/CustomStyle.css" />
+             </f:facet>
+      </h:head>
+      <h:body>
+            
+          <p:layout fullPage="true">
+              <p:layoutUnit position="north" closable="true" size="100px" styleClass="toplayout">
+                        <p:panel styleClass="headerpanel">
+                            <h:panelGrid columns="6" styleClass="header">
+                                <p:graphicImage url="/images/test.jpg" style="height:30px;width:30px;"/>
+                                <h:outputText value="Triya Solutions"></h:outputText></h:panelGrid>
+                        </p:panel>
+             </p:layoutUnit>
+              <p:layoutUnit position="center">
+            <h:outputText value="WELCOME ALL" style="text-align: right" />
+            
+           
+            <p:panel id="login_panel" header="#{panel.login}" style="width: 500px; height: 400px">
+            <h:form id="login_form">
+                  <p:messages id="msg" autoUpdate="true" showSummary="true" closable="true"  />
+                  <p:panelGrid id="login_gridpanel1"  columns="3" style="width: 400px; height: 200px; border:0px;">
+                        <p:outputLabel value="#{side.email}" for="login_email"></p:outputLabel>      
+                        
+                        <p:inputText id="login_email"  value="#{login.email}" binding="#{login.email}" required="true"  >
+                         <f:validateRegex  pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$" />
+    
+                        </p:inputText>
+                        <p:message for="login_email"  display="icon"/> 
+                  <p:outputLabel value="#{side.password}" for="login_password"></p:outputLabel>      
+                  <p:password id="login_password" value="#{login.password}" binding="#{login.password}" required="true"> 
+                        
+                  </p:password>
+                  <p:message for="login_password"  display="icon"/>  
+                    
+                    <p:commandButton id="login_login" action="#{login.login()}" resetValues="false" update="login_gridpanel1" value="#{buttons.login}" ></p:commandButton>
+                  <p:commandButton id="login_reset" action="#{login.reset()}" value="#{buttons.reset}" >
+                        <p:ajax resetValues="true" update="login_form" /> 
+                  </p:commandButton>
+                   
+                  </p:panelGrid>
+            </h:form>
+                  <h:form>
+                   <p:commandLink action="ForgotPassword.xhtml?faces-redirect=true" value="Forgot Password" ></p:commandLink>
+                   </h:form>
+            </p:panel>
+            
+              </p:layoutUnit>
+          </p:layout>
+      </h:body>
+</html>
+
