@@ -28,8 +28,8 @@ public class dbsquery {
 	 //private dbsquery dbsquery=new dbsquery();
 	static Connection con = null;
 	private  final String url = "jdbc:mysql://localhost:3306/RMS";
-	private  final String uname = "triya";
-	private  final String password = "Triya@123";
+	private  final String uname = "root";
+	private  final String password = "ash";
 
 	
 	// Variable declaration

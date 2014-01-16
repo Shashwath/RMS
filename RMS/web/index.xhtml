@@ -29,18 +29,18 @@
             <h:outputText value="WELCOME ALL" style="text-align: right" />
             
            
-            <p:panel id="login_panel" header="#{panel.login}" style="width: 500px; height: 400px">
-            <h:form id="login_form">
+            <p:panel id="login_panel" header="#{panel.login}" styleClass="loginpanel">
+                <h:form id="login_form" style="font-size: 8px;">
                   <p:messages id="msg" autoUpdate="true" showSummary="true" closable="true"  />
-                  <p:panelGrid id="login_gridpanel1"  columns="3" style="width: 400px; height: 200px; border:0px;">
-                        <p:outputLabel value="#{side.email}" for="login_email"></p:outputLabel>      
+                  <p:panelGrid id="login_gridpanel1"  columns="3" styleClass="logingrid">
+                      <p:outputLabel value="#{side.email}" for="login_email" styleClass="loginlabel"></p:outputLabel>      
                         
                         <p:inputText id="login_email"  value="#{login.email}" binding="#{login.email}" required="true"  >
                          <f:validateRegex  pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$" />
     
                         </p:inputText>
                         <p:message for="login_email"  display="icon"/> 
-                  <p:outputLabel value="#{side.password}" for="login_password"></p:outputLabel>      
+                        <p:outputLabel value="#{side.password}" for="login_password" styleClass="loginlabel"></p:outputLabel>      
                   <p:password id="login_password" value="#{login.password}" binding="#{login.password}" required="true"> 
                         
                   </p:password>
@@ -54,11 +54,14 @@
                   </p:panelGrid>
             </h:form>
                   <h:form>
-                   <p:commandLink action="ForgotPassword.xhtml?faces-redirect=true" value="Forgot Password" ></p:commandLink>
+                      <p:commandLink action="ForgotPassword.xhtml?faces-redirect=true" value="Forgot Password" style="font-size:10px" ></p:commandLink>
                    </h:form>
             </p:panel>
             
               </p:layoutUnit>
+               <p:layoutUnit position="south" size="50" header="Bottom">  
+        <h:outputText value="South unit content." />  
+    </p:layoutUnit>  
           </p:layout>
       </h:body>
 </html>
