@@ -39,3 +39,37 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', end
 .toplayout{
     border:0px;
 }
+.loginpanel{
+     width: 320px; 
+     height: 260px;
+     margin-left:38%;
+     margin-top: 5%;
+}
+.loginpanel input{
+    width:120px;
+    font-size:12px;
+    font-family:fantasy;
+}
+.loginlabel{
+    font-size:12px;
+    color:#009ec3;
+    font-family:fantasy;
+}
+.logingrid{
+    width: 280px;
+    height: 150px;
+    border:0px;
+    padding: 10px;
+}
+.logingrid tr{
+    border:0px;
+    font-size:14px;
+}
+.logingrid td{
+    border:0px;
+    width:90px;
+    padding: 10px;
+}
+.smallabel{
+    font-size:11px;
+}
