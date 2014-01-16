@@ -20,7 +20,7 @@ public class ForgotPassword {
 	  return "";
 	  }
 	  
-	  private int value=2;
+	  private int value;
 String test="<p:inputText >";
 
 	  public String getTest() {

@@ -87,6 +87,12 @@ public class DynamicUIService implements Services_DynamicUI {
 									log.info("action event executed ");
 							  }
 						});
+						
+						
+						//menuitem.addActionListener(this);
+						
+						
+						
 						//menuitem.setId(String.valueOf(businessentity.get(j)));
 						submenu.getChildren().add(menuitem);
 				  }
@@ -117,7 +123,7 @@ public class DynamicUIService implements Services_DynamicUI {
 }
 
 
-
+/*
 class Testing implements ActionListener
 {
 	  private final Logger log = Logger.getLogger(this.getClass().getName());
@@ -134,4 +140,4 @@ private int moduleid,entityid;
 			PersonalIds.setEntityid(entityid);
 			log.info("added actionlistner "+entityid);
 	  }
-}
+}*/
